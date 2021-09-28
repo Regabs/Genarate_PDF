@@ -18,15 +18,6 @@ class PDF(FPDF):
         self.cell(0, 5, 'Hal                   : ', border=False, ln=1, align='L' )
         self.cell(0, 5, 'Sifat                 : ', border=False, ln=1, align='L' )
         self.ln(10)
-    #def body(self):
-        #self.ln(50)
-        #self.set_font('times', 'B', 12)
-        #self.cell(0, 5, 'Dengan hormat,', border=False, ln=1, align='L' )
-
-
-    #def pint_body(self):
-        #self.add_page()
-        #self.body()
 
 pdf = PDF('P', 'mm', format='A4')
 pdf.add_page()
@@ -48,17 +39,20 @@ pdf.ln(30)
 pdf.cell(0, 5, 'Manajer', border=False, ln=0, align='L' )
 pdf.cell(0, 5, 'Penanggung Jawab', border=False, ln=1, align='R' )
 pdf.ln(30)
+img = qrcode.make('https://www.youtube.com/watch?v=-GmJLI122ZM')
+type(img)
+img.save("some_file.png")
+pdf.image('some_file.png', 10,195,30)
+
 
 pdf.cell(0, 5, 'Budi Budiman', border=False, ln=0, align='L' )
 pdf.cell(0, 5, 'Sudriman', border=False, ln=0, align='R' )
 
 
 
-img = qrcode.make('Some data here')
-type(img)
-img.save("some_file.png")
 
-#pdf.cell(0, 5, 'Dengan hormat,', border=False, ln=1, align='L' )
+
+
 
 
 
