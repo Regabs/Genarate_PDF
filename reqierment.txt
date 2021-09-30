@@ -1,0 +1,16 @@
+click==8.0.1
+colorama==0.4.4
+Flask==2.0.1
+fpdf==1.7.2
+fpdf2==2.4.3
+greenlet==1.1.1
+itsdangerous==2.0.1
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+Pillow==8.3.2
+pyPdf==1.13
+PyPDF2==1.26.0
+qrcode==7.3
+reportlab==3.6.1
+SQLAlchemy==1.4.25
+Werkzeug==2.0.1
